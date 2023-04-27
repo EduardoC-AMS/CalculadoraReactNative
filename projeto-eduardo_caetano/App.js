@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { TextInput, TouchableHighlight } from 'react-native';
 import { StyleSheet, Text, View,  } from 'react-native';
+
 import { Linking } from 'react-native';
 
 export default function App() {
@@ -25,7 +26,7 @@ export default function App() {
       <View style={styles.display}>
       <TextInput
         style={styles.displayOperacao}
-        placeholder="Digite sua operação" 
+        placeholder="Digite sua operação matemática ex: 1+1" 
         placeholderTextColor={'#fff'}
         value={String(operacao)}
         onChangeText={(texto)=>{setOperacao(texto)}}
@@ -73,7 +74,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: '#333',
     padding: 10,
-    marginTop: 250,
+    marginTop: 100,
   },
 
   
@@ -114,7 +115,7 @@ txtbtn:{
 
 ref: {
   textAlign: 'center',
-  marginTop: 60,
+  marginTop: 170,
   padding: 20,
   borderWidth: 3,
   borderRadius: 40,
